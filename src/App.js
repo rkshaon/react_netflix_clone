@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
 import Row from './Row';
+import Banner from './Banner';
 import requests from './requests';
 
 function App() {
   return (
     <div className="App">
-      <h1>Building Netflix Clone using ReactJS</h1>
+      {/* nav */}
+      {/* banner */}
+      <Banner />
+      {/* rows start */}
       <Row
         title="NETFLIX ORIGINALS"
         fetchURL={requests.fetchNetflixOriginals}
@@ -19,6 +23,7 @@ function App() {
       <Row title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
       <Row title="Romantic Movies" fetchURL={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
+      {/* rows end */}
     </div>
   );
 }
